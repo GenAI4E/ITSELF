@@ -1,6 +1,6 @@
 ## 📄 ITSELF: Attention Guided Fine-Grained Alignment for Vision–Language Retrieval (WACV 2026 (Oral))
 
-[[Tien-Huy Nguyen](href="https://scholar.google.com/citations?hl=en&user=gSRGW3gAAAAJ")] <sup>1,2</sup>, Huu-Loc Tran<sup>1,2</sup>, Thanh Duc Ngo<sup>1,2</sup>**
+[Tien-Huy Nguyen](https://scholar.google.com/citations?hl=en&user=gSRGW3gAAAAJ) <sup>1,2</sup>, Huu-Loc Tran<sup>1,2</sup>, Thanh Duc Ngo<sup>1,2</sup>**
 
 <sup>1</sup> University of Information Technology  
 <sup>2</sup> Vietnam National University - HCM  
