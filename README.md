@@ -22,6 +22,13 @@
 - [11/11/2025] Our paper has been accepted at WACV 2026.
 
 
+## Highlights
+- We propose ITSELF framework. A novel attention-guided implicit local alignment framework, ITSELF with GRAB that leverages encoder attention to mine fine-grained discriminativecues and reinforce global text-image alignment without additional supervision.
+- Robust Selection & Scheduling. We propose MARS, which fuses attention across layers and performs diversity-aware top-k selection; and ATS, which anneals the retention budget from coarse to fine over training to stabilize learning and prevent early information loss.
+
+![ITSELF Framework](framework.png)
+
+
 ## Citation 
 If you find this repository useful, please use the following BibTeX entry for citation.
 
