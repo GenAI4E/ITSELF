@@ -9,7 +9,27 @@
   <a href="https://arxiv.org/pdf/2601.01024v1"><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white" alt="arXiv"></a>
   <a href="https://huggingface.co/GenAI4ELab"><img src="https://img.shields.io/badge/🤗-dataset-yellow" alt="HuggingFace Checkpoint"></a>
   <a href="https://trhuuloc.github.io/itself/"><img src="https://img.shields.io/badge/ProjectPage-up-green" alt="Project Page"></a>
-  <a href="https://drive.google.com/file/d/1H6QSuwBRGqEni7Zk1ZIaBk-iv0BTC2cQ/view?usp=sharing"><img src="https://img.shields.io/badge/ProjectPage-up-green" alt="Poster"></a>
-  <a href="https://www.youtube.com/watch?v=afy9iBuSDM8"><img src="https://img.shields.io/badge/ProjectPage-up-green" alt="Video"></a>
 </p>
 
+## News
+- [03/08/2026] Check out our checkpoints, now available on [[Link](https://huggingface.co/GenAI4ELab)]. 
+
+- [01/22/2026] Our paper has been accepted for an oral presentation.
+
+- [11/11/2025] Our paper has been accepted at WACV 2026.
+
+
+## Citation 
+If you find this repository useful, please use the following BibTeX entry for citation.
+
+```
+@misc{nguyen2026itselfattentionguidedfinegrained,
+      title={ITSELF: Attention Guided Fine-Grained Alignment for Vision-Language Retrieval}, 
+      author={Tien-Huy Nguyen and Huu-Loc Tran and Thanh Duc Ngo},
+      year={2026},
+      eprint={2601.01024},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.01024}, 
+}
+```
