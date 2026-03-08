@@ -1,4 +1,4 @@
-## 📄 ITSELF: Attention Guided Fine-Grained Alignment for Vision–Language Retrieval (WACV 2026 (Oral (Acceptance rate ~3.5%)))
+## 📄 ITSELF: Attention Guided Fine-Grained Alignment for Vision–Language Retrieval (WACV 2026 (Oral))
 
 **Tien-Huy Nguyen<sup>1,2</sup>, Huu-Loc Tran<sup>1,2</sup>, Thanh Duc Ngo<sup>1,2</sup>**
 
@@ -17,7 +17,7 @@
 ## News
 - [03/08/2026] Check out our checkpoints, now available on [[Link](https://huggingface.co/GenAI4ELab)]. 
 
-- [01/22/2026] Our paper has been accepted for an oral presentation.
+- [01/22/2026] Our paper has been accepted for an oral presentation (Acceptance rate ~3.5%).
 
 - [11/11/2025] Our paper has been accepted at WACV 2026.
 
