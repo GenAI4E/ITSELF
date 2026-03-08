@@ -25,8 +25,13 @@
 ## Highlights
 - We propose ITSELF framework. A novel attention-guided implicit local alignment framework, ITSELF with GRAB that leverages encoder attention to mine fine-grained discriminativecues and reinforce global text-image alignment without additional supervision.
 - Robust Selection & Scheduling. We propose MARS, which fuses attention across layers and performs diversity-aware top-k selection; and ATS, which anneals the retention budget from coarse to fine over training to stabilize learning and prevent early information loss.
+- Strong Empirical Results: Extensive experiments establish SOTA performance on 3 widely used TBPS benchmarks and improved cross-dataset generalization, confirming the effectiveness and robustness of our approach.
 
-![ITSELF Framework](framework.png)
+
+<p align="center">
+  <img src="framework.png" width="700"/>
+</p> 
+
 
 
 ## Citation 
