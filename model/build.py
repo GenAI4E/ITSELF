@@ -225,7 +225,7 @@ class ITSELF(nn.Module):
 
                 atten_i = self.rollout(atten_i)
                 atten_t = self.rollout(atten_t)
-                if not self.args.only_bge:
+                if not self.args.only_global:
                     if current_step is not None:
                         i_grab_f = self.visul_emb_layer(image_feats, atten_i, current_step)
                         t_grab_f = self.texual_emb_layer(text_feats, caption_ids, atten_t, current_step)
@@ -237,7 +237,7 @@ class ITSELF(nn.Module):
             i_feats = image_feats[:, 0, :].float()
             # i_feats = image_feats.float() # for CLIP ResNet visual model
             t_feats = text_feats[torch.arange(text_feats.shape[0]), caption_ids.argmax(dim=-1)].float()
-            if not self.args.only_bge:
+            if not self.args.only_global:
                 i_grab_f = self.visul_emb_layer(image_feats, atten_i)
                 t_grab_f = self.texual_emb_layer(text_feats, caption_ids, atten_t)
 
@@ -247,7 +247,6 @@ class ITSELF(nn.Module):
             M = batch['pids'].max().item()
             new_labels = objectives.update_labels_for_negatives(batch['pids'], hard_negatives, M)
             all_pairs = objectives.create_sample_pairs(i_feats, t_feats, hard_negatives, new_labels, batch['pids'])
-            all_cid_loss = 0
             ni_feats, nt_feats, nlabels = all_pairs
             z_feats1 = torch.cat([ni_feats.float(), nt_feats.float()], dim=1)
             z_feats2 = torch.cat([nt_feats.float(), ni_feats.float()], dim=1)
@@ -268,7 +267,6 @@ class ITSELF(nn.Module):
                 M_ = batch['pids'].max().item()
                 new_labels_ = objectives.update_labels_for_negatives(batch['pids'], hard_negatives_, M_)
                 all_pairs_ = objectives.create_sample_pairs(i_grab_f, t_grab_f, hard_negatives_, new_labels_, batch['pids'])
-                all_cid_loss_ = 0
                 ni_feats_, nt_feats_, nlabels_ = all_pairs_
                 z_feats1_ = torch.cat([ni_feats_.float(), nt_feats_.float()], dim=1)
                 z_feats2_ = torch.cat([nt_feats_.float(), ni_feats_.float()], dim=1)
@@ -276,7 +274,6 @@ class ITSELF(nn.Module):
                 z_feats2_ = self.mlp_grab(z_feats2_.float())
                 cross_modal_logits1_ = self.classifier_grab(z_feats1_.float())
                 cross_modal_logits2_ = self.classifier_grab(z_feats2_.float())
-                device_ = cross_modal_logits1_.device
                 nlabels_ = nlabels_.to(device)
                 closs2 =  objectives.compute_cid(cross_modal_logits1_, cross_modal_logits2_,nlabels_)
                 image_logits_ = self.classifier_id_grab(i_grab_f.half()).float()
