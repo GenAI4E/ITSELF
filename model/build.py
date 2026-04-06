@@ -250,8 +250,8 @@ class ITSELF(nn.Module):
             ni_feats, nt_feats, nlabels = all_pairs
             z_feats1 = torch.cat([ni_feats.float(), nt_feats.float()], dim=1)
             z_feats2 = torch.cat([nt_feats.float(), ni_feats.float()], dim=1)
-            z_feats1 = self.mlp_bge(z_feats1.float())
-            z_feats2 = self.mlp_bge(z_feats2.float())
+            z_feats1 = self.mlp_global(z_feats1.float())
+            z_feats2 = self.mlp_global(z_feats2.float())
             cross_modal_logits1 = self.classifier_global(z_feats1.float())
             cross_modal_logits2 = self.classifier_global(z_feats2.float())
             device = cross_modal_logits1.device 
