@@ -83,3 +83,12 @@ def compute_cid(cross_modal_logits1, cross_modal_logits2, labels):
     criterion = nn.CrossEntropyLoss(reduction="mean")
     loss = criterion(cross_modal_logits1, labels) + criterion(cross_modal_logits2, labels)
     return loss / 2
+
+
+def compute_id(logits, labels):
+    """
+    Instance loss proposed at http://arxiv.org/abs/1711.05535
+    """
+    criterion = nn.CrossEntropyLoss(reduction="mean")
+    loss = criterion(logits, labels)
+    return loss
